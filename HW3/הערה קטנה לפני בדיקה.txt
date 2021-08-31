@@ -1,0 +1,27 @@
+לבודק שלום רב, שמי שגיא ועבדתי רבות על עבודה זו,
+חשוב לי לציין כי מישמתי את משימת הבונוס שפורסמה , כלומר השימוש ב- threadPool
+עבור מחלקת הלקוח (Costumer) , המימוש שם מקיים במדויק את מה
+שנדרשו לבצע , כלומר ריצה של תהליכוני הלקוח כך שיעבדו במקביל ללא המתנה מיותרת אחד לשני ו-2 תהליכונים של
+threadPool
+בגודל 2 שיטפלו בכולם.
+
+זה הקוד שמבצע את הדרישה הנ״ל
+    public void run() {
+        /** ----BONUS BONUS BONUS BONUS BONUS BONUS----
+         * Thread Pool for customer processes - customers will work At the same time without unnecessary waiting for each other and 2
+         * processes (ThreadPool size 2) will take care of them all
+         */
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        for (int i = 0; i < 10; i++) {
+            executor.execute(customers.get(i));
+        }
+        executor.shutdown();
+
+        
+
+        כמו כן הוא גם מומש בתוכנית כמובן, ניתן למצוא אותו במחלקת 
+        mainoffice
+
+        משורה 108 והלאה.
+
+        תודה על הקריאה,שגיא.
